@@ -1,14 +1,47 @@
 <html>
   <head>
+     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet">
   </head>
 
-<body>
+<body bgcolor="#E6DBD3">
 <!-- Element to contain animated typing -->
-  &nbsp;
-  &nbsp;
-  &nbsp;
-  &nbsp;
-  <center><span id="element"></span></center>
+  <div style="padding-top:100px"></div>
+  <center><span id="element" style="font-family: 'Playfair Display', serif;font-size: 600%;"></span></center>
+  <div id="typed-strings">
+    <p>Our area of expertise is  <strong>Mathematics</strong></p>
+    <p>Our area of expertise is  <strong>Certified Programming</strong></p>
+    <p>Our area of expertise is  <strong>Machine Learning</strong></p>
+    <p>Our area of expertise is  <strong>Large Language Models</strong></p>
+  </div>
+
+  <div style="padding-top:50px"></div>
+  <center><span id="typed" style="font-family: 'Playfair Display', serif;font-size: 200%;"></span></center>
+  <!--
+    <div id="text-strings">
+  	  <p> We are company dedicated to developing <i>state-of-the-art</i> <b>Large Language Models</b>
+	  for various advanced applications in science and industry. Our customers are
+	  many of the largest companies in their sectors.</p>
+  </div>
+  -->
+  <center><div style="padding-top:30px; font-family: 'Noto Sans Symbols 2', sans-serif;font-size:250%;">&#x1F65C;</div></center>
+  <center>
+	  <span id="typed-text"
+		style="display:block; font-family: 'Playfair Display',serif;
+		       padding-top:0px; font-size: 150%; width: 70%;text-align: justify;text-justify:inter-character;">
+ <p><i>We are company dedicated to developing, maintaining & advancing <i>state-of-the-art</i> <b>Large Language Models</b>
+                 for various advanced applications in science and industry. Our customers are
+		 many of the largest companies in their sectors.</i></p>
+		  <p><i>We use mathematics to develop <b>reliable</b> and <b>certified</b> software. Software we deliver comes with <b>proofs of correctnes </b> and with significant mathematical calculations regarding reliability, in case of LLMs.</i></p>
+	  </span>
+  </center>
+  <center>
+	  <div style="padding-top:100px; font-family: 'Playfair Display',serif; font-size:100%;">
+		  <i>contact@deepresearch.uk &copy; 2024 Deep Research Ltd., London, UK</i>
+	  </div>
+  </center>
 
   <!-- Load library from the CDN -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -16,9 +49,28 @@
   <!-- Setup and start animation! -->
   <script>
     var typed = new Typed('#element', {
-      strings: ['<i>First</i> sentence.', '&amp; see you soon.'],
+      strings: ['<i>Deep Research</i>'],
       typeSpeed: 50,
+      cursorChar: '',
+      loop: false
     });
+
+    var typedOne = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed:70,
+      smartBackpace: true,
+      cursorChar: '',
+      loop: false
+    });
+
+    var typedTwo = new Typed('#typed-text1', {
+      stringsElement: '#text-strings1',
+      typeSpeed:10,
+      smartBackpace: true,
+      cursorChar: '',
+      loop: false
+    });
+
   </script>
 </body>
 
